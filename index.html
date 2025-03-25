@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoFolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .custom-navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+        }
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        .btn-custom {
+            background-color: #a7a21d;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .btn-custom:hover {
+            background-color: #8c8a16;
+        }
+        .portfolio-img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .portfolio-img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-camera" style="font-size: 24px; margin-right: 8px;"></i>
+                My PhotoFolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>I'm <span style="color: #a7a21d;">Sonam Chhabaidiya</span></h1>
+            <p>A Professional Photographer from Mumbai</p>
+            <button class="btn btn-custom mt-3">AVAILABLE FOR HIRE</button>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">My Work</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="https://bootstrapmade.com/content/demo/PhotoFolio/assets/img/gallery/gallery-1.jpg" 
+                        alt="Portfolio 1" class="img-fluid portfolio-img">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://bootstrapmade.com/content/demo/PhotoFolio/assets/img/gallery/gallery-2.jpg" 
+                        alt="Portfolio 2" class="img-fluid portfolio-img">
+                </div>
+                <div class="col-md-4 mb-4">
+                    <img src="https://bootstrapmade.com/content/demo/PhotoFolio/assets/img/gallery/gallery-8-2.jpg" 
+                        alt="Portfolio 3" class="img-fluid portfolio-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form action="/submit" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white text-center">
+        <p>&copy; 2024 PhotoFolio. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
